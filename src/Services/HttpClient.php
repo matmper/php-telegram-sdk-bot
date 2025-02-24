@@ -70,7 +70,10 @@ class HttpClient implements HttpRequest
             $response = (string) curl_exec($this->curl);
             $responseCode = (int) curl_getinfo($this->curl, CURLINFO_HTTP_CODE);
 
-            echo '<pre>'; print_r($response); echo '</pre>'; exit;
+            echo '<pre>';
+            print_r($response);
+            echo '</pre>';
+            exit;
 
             curl_close($this->curl);
 
